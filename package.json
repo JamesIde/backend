@@ -1,0 +1,51 @@
+{
+  "name": "budget",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx --watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "db:up": "npx mikro-orm migration:up",
+    "db:create": "npx mikro-orm migration:create",
+    "db:down": "npx mikro-orm migration:down",
+    "db:list": "npx mikro-orm migration:list",
+    "db:seed": "npx mikro-orm seeder:run",
+    "db:refresh": "npx mikro-orm schema:fresh --run --seed",
+    "db:force": "npx mikro-orm schema:fresh --run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@mikro-orm/cli": "^7.1.4",
+    "@tsconfig/node22": "^22.0.5",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^25.9.3",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "@mikro-orm/core": "^7.1.4",
+    "@mikro-orm/migrations": "^7.1.4",
+    "@mikro-orm/mssql": "^7.1.4",
+    "@mikro-orm/seeder": "^7.1.4",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.5.2",
+    "helmet": "^8.2.0",
+    "http-errors": "^2.0.1",
+    "jose": "^6.2.3",
+    "jsonwebtoken": "^9.0.3",
+    "nanoid": "^5.1.16",
+    "uuid": "^14.0.0",
+    "winston": "^3.19.0",
+    "winston-transport": "^4.9.0",
+    "zod": "^4.4.3"
+  }
+}
